@@ -1,4 +1,5 @@
 async function selection_sort() {
+  disable();
   let arr = document.querySelectorAll(".bar");
   if (arr.length == 0) return;
 
@@ -18,4 +19,5 @@ async function selection_sort() {
     }
     arr[i].style.background = "green";
   }
+  enable();
 }

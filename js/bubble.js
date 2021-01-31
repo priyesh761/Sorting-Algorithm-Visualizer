@@ -1,4 +1,5 @@
 async function bubble_sort() {
+  disable();
   let arr = document.querySelectorAll(".bar");
   if (arr.length == 0) return;
 
@@ -18,4 +19,5 @@ async function bubble_sort() {
     arr[arr.length - i - 1].style.background = "green";
   }
   arr[0].style.background = "green";
+  enable();
 }

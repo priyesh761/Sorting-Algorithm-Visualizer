@@ -52,9 +52,11 @@ async function merge(arr, start, mid, end) {
   }
 }
 
-function merge_sort() {
+async function merge_sort() {
+  disable();
   let arr = document.querySelectorAll(".bar");
   if (arr.length == 0) return;
 
-  msort(arr, 0, arr.length - 1);
+  await msort(arr, 0, arr.length - 1);
+  enable();
 }

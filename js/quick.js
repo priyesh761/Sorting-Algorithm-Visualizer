@@ -33,8 +33,10 @@ async function partition(arr, start, end) {
 }
 
 async function quick_sort() {
+  disable();
   let arr = document.querySelectorAll(".bar");
   if (arr.length == 0) return;
 
-  qsort(arr, 0, arr.length - 1);
+  await qsort(arr, 0, arr.length - 1);
+  enable();
 }

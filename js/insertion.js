@@ -1,4 +1,5 @@
 async function insertion_sort() {
+  disable();
   let arr = document.querySelectorAll(".bar");
   if (arr.length == 0) return;
   arr[0].style.background = "red";
@@ -23,4 +24,5 @@ async function insertion_sort() {
       if (j >= 0) ht2 = parseInt(arr[j].style.height);
     }
   }
+  enable();
 }

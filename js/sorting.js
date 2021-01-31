@@ -38,3 +38,21 @@ function swap(el1, el2) {
   el2.style.height = transform1;
   //console.log(`swapped ${transform1} ${transform2}`);
 }
+
+function enable() {
+  let buttons = document.getElementsByClassName("btn"),
+    len = buttons !== null ? buttons.length : 0,
+    i = 0;
+  for (i; i < len; i++) {
+    buttons[i].classList.remove("disabled");
+  }
+}
+
+function disable() {
+  let buttons = document.getElementsByClassName("btn"),
+    len = buttons !== null ? buttons.length : 0,
+    i = 0;
+  for (i; i < len; i++) {
+    buttons[i].classList.add("disabled");
+  }
+}

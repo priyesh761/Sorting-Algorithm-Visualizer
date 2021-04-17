@@ -91,7 +91,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
-  <script src="./js/sorting-algo.js"></script>
   <script src="./js/utils.js"></script>
 
   <script>
@@ -113,11 +112,28 @@
     }
 
     document.getElementById("new_array").addEventListener("click", init);
-    document.getElementById("bubble_sort").addEventListener("click", bubble_sort);
-    document.getElementById("selection_sort").addEventListener("click", selection_sort);
-    document.getElementById("insertion_sort").addEventListener("click", insertion_sort);
-    document.getElementById("quick_sort").addEventListener("click", quick_sort);
-    document.getElementById("merge_sort").addEventListener("click", merge_sort);
+    document.getElementById("bubble_sort").addEventListener("click", () => {
+      import('./js/bubble-sort.js').then(mod => {
+        mod.bubble_sort();
+      });
+    });
+    document.getElementById("selection_sort").addEventListener("click", () => {
+      import('./js/selection-sort.js').then(mod => {
+        mod.selection_sort();
+      });
+    });
+    document.getElementById("insertion_sort").addEventListener("click", () => {
+      import('./js/insertion-sort.js').then(mod => {
+        mod.insertion_sort();
+      });
+    });
+    document.getElementById("quick_sort").addEventListener("click", () => {
+      import('./js/quick-sort.js').then(mod => {
+        mod.quick_sort();
+      });
+    });
+    document.getElementById("merge_sort").addEventListener("click", () =>
+      import('./js/merge-sort.js').then(mod => mod.merge_sort()));
   </script>
 
 </body>

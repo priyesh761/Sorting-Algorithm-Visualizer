@@ -16,7 +16,7 @@ function init() {
     drw.appendChild(dv);
   }
 
-  console.log("success", num_bars);
+  //console.log("success", num_bars);
 }
 
 function resolveAfterXmilliSeconds(x) {
